@@ -102,6 +102,12 @@ colors_dict = {"Red": (255, 0, 0),
 
 RGB color space를 [L*a*b* color space](https://ko.wikipedia.org/wiki/CIELAB_색_공간)로 변환 (RGB나 HSV가 아닌 L*a*b* 를 이용하는 이유는 선택된 객체의 색상의 어떤 색상과 가까운지 측정하기 위해 유클리디안 거리(Euclidean Distance) 측정 방식을 사용하기 때문입니다.)
 
+유클리디안 거리(Euclidean Distance) 혹은 유클리드 거리 측정 방식이라 불리는 이 알고리즘은 단순히 값들 간의 거리를 구하는 방법입니다. 간단히 파타고라스 정의와 같이 삼각형을 만들어서 계산하는 방법인데 다른 점은 여러차원의 거리를 계산 할 수 있다는 것입니다.
+
+<div align="center">
+  <img src="https://blog.kakaocdn.net/dn/bz97eZ/btrR2HUxuYZ/qt0LXkprE0r1j5evq4RNOk/img.png" width="30%">
+</div>
+
 ```python
 lab_array = np.zeros((len(colors_dict), 1, 3), dtype="uint8")
 color_names = []
